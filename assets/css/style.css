@@ -25,16 +25,20 @@ img {
   vertical-align: bottom;
   max-width: 100%;
   height: auto;
-} */
+}
 
-/* .row {
+.container {
+  overflow: hidden;
+}
+
+.row {
   margin-right: -15px;
   margin-left: -15px;
 }
 
 a {
   color: #444;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 li {
@@ -68,20 +72,17 @@ section {
   padding: 0;  
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
 .header {
   transition: all 0.5s;
-  z-index: 997;  
+  z-index: 997;
   visibility: hidden;
   display: none;
 }
 
-.header.header-scrolled {
+.header.header-scrolled {  
+  background: rgb(0, 0, 0, 0.8);
   visibility: visible;
   display: block;
-  background: rgb(0, 0, 0, 0.8);    
 }
 
 /*--------------------------------------------------------------
@@ -91,7 +92,7 @@ section {
 * Desktop Navigation 
 */
 .navbar {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .navbar ul {
@@ -106,25 +107,12 @@ section {
   position: relative;
 }
 
-.navbar a,
-.navbar a:focus {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 30px;
-  font-family: "游ゴシック", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: #ffffff;
-  white-space: nowrap;
-  transition: 0.3s;
-}
 
 .navbar a i,
-.navbar a:focus i {
-  font-size: 12px;
+.navbar a:focus i {  
+  font-size: 14px;
   line-height: 0;
-  margin-left: 5px;
+  margin: 0 12px 0 0;
 }
 
 .navbar a:hover,
@@ -132,10 +120,24 @@ section {
 .navbar .active:focus,
 .navbar li:hover>a {
   color: #000000;
+}
+
+.navbar li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 30px;
+  display: inline-block;
+  position: relative;
+}
+
+.navbar li a.active, .navbar li a:hover {
+  color: #000;
+  text-decoration: none !important;
   background: #FFCD20;
 }
 
-.navbar a.active::after {
+.navbar li a.active:after {
   top: 100%;
   left: 50%;
   border: solid transparent;
@@ -149,9 +151,6 @@ section {
   border-width: 10px;
   margin-left: -10px;
 }
-
-
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -178,7 +177,7 @@ section {
 }
 
 .header-list-item {  
-  display: flex;
+  display: flex !important;
   margin-right: 50px;
 }
 
@@ -272,7 +271,13 @@ section {
   margin: 0 0 50px 0;
 }
 
+.main-example-list {
+  margin-left: 2%;
+}
+
 .main-example-list li {
+  display: flex;
+  align-items: center;
   float: left;
   width: 45%;
   background: #fff;
@@ -285,7 +290,7 @@ section {
 .main-example-list li i {
     color: #FF5400;
     font-size: 35px;
-    margin: 0 0 10 0;
+    margin: 0 0 10 0;    
 }
 
 .main-usp {
